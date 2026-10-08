@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAKE AWAY — Order Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="#">TAKE <i>AWAY</i></a><div class="header-actions"><button id="langBtn">FR</button><button id="cartBtn"><span data-i18n="cart">Cart</span> <b id="cartCount">0</b></button></div></header>
+<main>
+<section class="hero"><div><small data-i18n="heroSmall">INDIAN CUISINE • HERBLAY</small><h1 data-i18n="heroTitle">Culture of <em>Flavor</em></h1><p data-i18n="heroText">Fresh naan, generous plates and authentic Indian flavours.</p><a href="#menu" class="btn" data-i18n="orderNow">Order now</a></div></section>
+<section id="menu" class="section"><small data-i18n="menuSmall">OUR MENU</small><h2 data-i18n="menuTitle">Choose your favourites</h2><div id="products" class="grid"></div></section>
+</main>
+<aside id="cart" class="cart"><button id="closeCart">×</button><h2 data-i18n="yourOrder">Your order</h2><div id="cartItems"></div><div class="total"><span data-i18n="total">Total</span> <strong id="total">0.00 BHD</strong></div><button id="checkoutBtn" class="btn full" data-i18n="checkout">Checkout</button></aside>
+<div id="modal" class="modal"><div class="modal-box"><button id="closeModal">×</button><h2 data-i18n="checkout">Checkout</h2><div id="checkoutForm">
+<label data-i18n="nameLabel">Name<input id="name" required></label><label data-i18n="phoneLabel">Phone<input id="phone" required></label>
+<div class="choice"><button data-type="delivery" class="selected" data-i18n="delivery">Home delivery</button><button data-type="pickup" data-i18n="pickup">Pickup</button></div>
+<div id="deliveryFields"><label data-i18n="addressLabel">Address<textarea id="address"></textarea></label><button type="button" id="locBtn" class="secondary" data-i18n="useLocation">📍 Use my location</button><p id="locStatus"></p><input type="hidden" id="lat"><input type="hidden" id="lng"></div>
+<label data-i18n="paymentLabel">Payment<select id="payment"><option value="cash" data-i18n="cash">Cash</option></select></label>
+<label data-i18n="notesLabel">Notes<textarea id="notes" placeholder="Optional"></textarea></label>
+<button id="placeOrder" class="btn full" data-i18n="placeOrder">Place order</button><p id="orderStatus"></p>
+</div></div></div>
+<script src="app.js"></script>
+</body></html>
